@@ -1,0 +1,16 @@
+Source: freewrl
+Section: graphics
+Priority: optional
+Maintainer: Igor Ulyanov <disinbox@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev, pkg-config, libxxf86vm-dev, libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev, libglew-dev, libxaw7-dev, lesstif2-dev, libimlib2-dev, libxml2-dev, libexpat1-dev, libmozjs185-dev, libfontconfig1-dev, libz-dev, libfreetype6-dev, libjpeg8-dev, libpng12-dev, libimlib2-dev, imagemagick
+Standards-Version: 3.9.3
+Homepage: http://freewrl.sourceforge.net
+#Vcs-Git: git://git.debian.org/collab-maint/freewrl.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/freewrl.git;a=summary
+
+Package: freewrl
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: VRML/X3D browser
+ VRML97 and X3D compliant browser, library, and web-browser plugin
+

@@ -1,0 +1,25 @@
+From b43bae78a615fc36f08613245566fbbee142b11e Mon Sep 17 00:00:00 2001
+From: Igor Ulyanov <disinbox@gmail.com>
+Date: Tue, 28 Jan 2014 14:31:26 +0400
+Subject: [PATCH 3/3] printf commented
+
+---
+ src/lib/iglobal.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/lib/iglobal.c b/src/lib/iglobal.c
+index bb4d874..2092470 100644
+--- a/src/lib/iglobal.c
++++ b/src/lib/iglobal.c
+@@ -417,7 +417,7 @@ ttglobal gglobal()
+ 	ttglobal iglobal = gglobal0();
+ 	if(iglobal == NULL)
+ 	{
+-		printf("ouch - no state for this thread - hit a key to exit\n");
++                //printf("ouch - no state for this thread - hit a key to exit\n");
+ 		//getchar();
+ 		//let it bomb exit(-1);
+ 	}
+-- 
+1.8.5.1
+

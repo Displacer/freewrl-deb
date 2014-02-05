@@ -1,0 +1,5 @@
+freewrl (1.22.13-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Igor Ulyanov <disinbox@gmail.com>  Tue, 04 Feb 2014 13:34:22 +0400

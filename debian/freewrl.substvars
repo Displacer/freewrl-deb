@@ -1,0 +1,2 @@
+shlibs:Depends=freewrl, libc6 (>= 2.3.2), libexpat1 (>= 2.0.1), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.2.1), libgl1-mesa-glx | libgl1, libglew1.7 (>= 1.7.0), libglu1-mesa | libglu1, libice6 (>= 1:1.0.0), libimlib2, libjpeg8 (>= 8c), libmozjs185-1.0 (>= 1.8.5-1.0.0+dfsg), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libpng12-0 (>= 1.2.13-4), libsm6, libx11-6, libxaw7, libxext6, libxml2 (>= 2.7.4), libxmu6, libxt6, libxxf86vm1, zlib1g (>= 1:1.1.4)
+misc:Depends=
