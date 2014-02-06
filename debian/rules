@@ -17,7 +17,9 @@
 export DH_OPTIONS
 
 override_dh_auto_configure:
-	dh_auto_configure -- --enable-libeai --enable-fontconfig
+	dh_auto_configure -- --enable-libeai --with-target=x11 --with-statusbar=hud 
+
+#--enable-fontconfig
 
 
 %:
