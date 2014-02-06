@@ -1,0 +1,25 @@
+From b55285bf56c323d37a947da0835a21b967ea073a Mon Sep 17 00:00:00 2001
+From: Igor Ulyanov <disinbox@gmail.com>
+Date: Tue, 28 Jan 2014 11:42:32 +0400
+Subject: [PATCH 2/2] prevent segfault in Parser_scanStringValueToMem
+
+---
+ src/lib/input/EAI_C_CommonFunctions.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/lib/input/EAI_C_CommonFunctions.c b/src/lib/input/EAI_C_CommonFunctions.c
+index 80f7a90..caed28e 100644
+--- a/src/lib/input/EAI_C_CommonFunctions.c
++++ b/src/lib/input/EAI_C_CommonFunctions.c
+@@ -296,7 +296,7 @@ void Parser_scanStringValueToMem(struct X3D_Node *node, size_t coffset, indexT c
+ 	char *mfstringtmp = NULL;
+ 	int oldXMLflag;
+ 	struct X3D_Node *np;
+-	struct VRMLParser *parser = ((ppEAI_C_CommonFunctions)gglobal()->EAI_C_CommonFunctions.prv)->parser;
++	struct VRMLParser *parser = gglobal() ? ((ppEAI_C_CommonFunctions)gglobal()->EAI_C_CommonFunctions.prv)->parser : NULL;
+ 	#ifdef SETFIELDVERBOSE
+ 	printf ("\nPST, for %s we have %s strlen %lu\n",stringFieldtypeType(ctype), value, strlen(value));
+ 	#endif
+-- 
+1.8.5.1
+
