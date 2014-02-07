@@ -1,0 +1,28 @@
+Index: freewrl-1.22.13/src/lib/iglobal.c
+===================================================================
+--- freewrl-1.22.13.orig/src/lib/iglobal.c
++++ freewrl-1.22.13/src/lib/iglobal.c
+@@ -417,8 +417,8 @@ ttglobal gglobal()
+ 	ttglobal iglobal = gglobal0();
+ 	if(iglobal == NULL)
+ 	{
+-		printf("ouch - no state for this thread - hit a key to exit\n");
+-		getchar();
++                //printf("ouch - no state for this thread - hit a key to exit\n");
++		//getchar();
+ 		//let it bomb exit(-1);
+ 	}
+ 	return iglobal;
+Index: freewrl-1.22.13/src/lib/input/EAI_C_CommonFunctions.c
+===================================================================
+--- freewrl-1.22.13.orig/src/lib/input/EAI_C_CommonFunctions.c
++++ freewrl-1.22.13/src/lib/input/EAI_C_CommonFunctions.c
+@@ -296,7 +296,7 @@ void Parser_scanStringValueToMem(struct
+ 	char *mfstringtmp = NULL;
+ 	int oldXMLflag;
+ 	struct X3D_Node *np;
+-	struct VRMLParser *parser = ((ppEAI_C_CommonFunctions)gglobal()->EAI_C_CommonFunctions.prv)->parser;
++	struct VRMLParser *parser = gglobal() ? ((ppEAI_C_CommonFunctions)gglobal()->EAI_C_CommonFunctions.prv)->parser : NULL;
+ 	#ifdef SETFIELDVERBOSE
+ 	printf ("\nPST, for %s we have %s strlen %lu\n",stringFieldtypeType(ctype), value, strlen(value));
+ 	#endif
